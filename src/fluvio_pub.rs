@@ -12,6 +12,13 @@ pub async fn publish_metrics(addr: &str, topic: &str, metrics: &SystemMetrics) -
         "cpu_usage": metrics.cpu_usage,
         "memory_used": metrics.memory_used,
         "memory_total": metrics.memory_total,
+        "swap_used": metrics.swap_used,
+        "swap_total": metrics.swap_total,
+        "load_avg_1min": metrics.load_avg_1min,
+        "load_avg_5min": metrics.load_avg_5min,
+        "load_avg_15min": metrics.load_avg_15min,
+        "uptime": metrics.uptime,
+        "processes_count": metrics.processes_count,
         "timestamp": chrono::Utc::now().to_rfc3339()
     });
     
